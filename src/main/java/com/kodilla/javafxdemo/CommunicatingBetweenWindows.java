@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class CreatingAlertBoxes extends Application {
+public class CommunicatingBetweenWindows extends Application {
 
     Stage window;
     Button button;
@@ -19,11 +19,14 @@ public class CreatingAlertBoxes extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         window = primaryStage;
-        window.setTitle("Tutorial - 5 - Creating Alert Boxes");
+        window.setTitle("Tutorial - 6 - Communicating Between Window");
 
         button = new Button("Click me");
 
-        button.setOnAction(e -> AlertBox.display("Title of Window", "It works!"));
+        button.setOnAction(e -> {
+            boolean result = ConfirmBox.display("Title of window", "Are you sure?");
+            System.out.println("You choose " + result);
+        });
 
         StackPane layout = new StackPane();
         layout.getChildren().addAll(button);
