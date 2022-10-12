@@ -6,9 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+public class CreatingAlertBoxes extends Application {
 
-public class Main extends Application  {
-
+    Stage window;
     Button button;
 
     public static void main(String[] args) {
@@ -18,20 +18,17 @@ public class Main extends Application  {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        primaryStage.setTitle("Title of the Window");
+        window = primaryStage;
+        window.setTitle("Tutorial - 5 - Creating Alert Boxes");
 
-        button = new Button();
-        button.setText("Click me");
-        button.setOnAction(e -> System.out.println("Button pressed, lambda"));
+        button = new Button("Click me");
+        button.setOnAction(e -> AlertBox.display("Title of Window", "It works!"));
 
         StackPane layout = new StackPane();
-        layout.getChildren().add(button);
+        layout.getChildren().addAll(button);
 
         Scene scene = new Scene(layout, 300, 250);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
+        window.setScene(scene);
+        window.show();
     }
-
-
 }
