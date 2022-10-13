@@ -21,7 +21,7 @@ public class ListeningSelectionChanges extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
-        window.setTitle("Tutorial - 12 - ChoiceBox (Drop Down Menu)");
+        window.setTitle("Tutorial - 13 - Listening for Selection Changes");
 
         button = new Button("Click me");
 
