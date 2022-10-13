@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 
 public class ListViewTutorial extends Application {
 
-
     Stage window;
     Scene scene;
     Button button;
